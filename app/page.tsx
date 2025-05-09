@@ -24,48 +24,63 @@ const features = [
     tagline: "Your 24/7 mental health companion",
     desc: "Engage in confidential conversations with our advanced LLM therapist. Process emotions, gain insights, and receive guidance tailored to your unique mental health journey.",
     icon: <MdOutlinePsychology className='w-10 h-10 text-white'/>,
+    link: '/therapist'
   },
   {
     name: "Breathing Center",
     tagline: "Breathe your way to clarity",
     desc: "Access scientifically proven breathing techniques that help reduce anxiety, improve focus, and restore calm. Visualize your breathing patterns and track your progress over time.",
     icon: <RiLungsFill className='w-10 h-10 text-white'/>,
+    link: '/breathing'
+
   },
   {
     name: "Sleep Analytics",
     tagline: "Unlock restorative sleep",
     desc: "Monitor your sleep cycles, recognize patterns, and optimize your rest. Receive personalized recommendations based on your unique sleep profile and habits.",
     icon: <GiNightSleep className='w-10 h-10 text-white'/>,
+    link: '/sleep'
+
   },
   {
     name: "Mood Tracking",
     tagline: "Understand your emotional landscape",
     desc: "Visualize your emotional patterns with elegant, insightful analytics. Identify triggers, celebrate improvements, and gain deeper self-awareness through data.",
     icon: <TbMoodSearch className='w-10 h-10 text-white'/>,
+    link: '/mood'
+
   },
   {
     name: "Mental Memes",
     tagline: "Laughter is the best medicine",
     desc: "Enjoy curated, mindfulness-promoting memes that offer moments of levity and perspective. A gentle reminder not to take life too seriously.",
     icon: <GiDualityMask className='w-10 h-10 text-white'/>,
+    link: '/memes'
+
   },
   {
     name: "Focus Space",
     tagline: "Train your mind, nurture your spirit",
     desc: "Explore minigames, curated playlists, and activities designed to strengthen focus, reduce stress, and provide therapeutic mental breaks.",
     icon: <GiMeditation className='w-10 h-10 text-white'/>, 
+    link: '/focus'
+
   },
   {
     name: "Community Connection",
     tagline: "You're never alone in this journey",
     desc: "Join a supportive community of individuals on similar paths. Share experiences, offer support, and learn from others in moderated, safe discussion spaces.",
     icon: <RiUserCommunityLine className="w-10 h-10 text-white"/>,
+    link: '/community'
+
   },
   {
     name:"Journal Center",
     tagline: "Reflect, express, and grow",
     desc: "Capture your thoughts, feelings, and experiences in a secure digital journal. Use guided prompts or freeform entries to explore your inner world.",
     icon: <BsFillJournalBookmarkFill className='w-10 h-10 text-white'/>,
+    link: '/journal'
+
   }
 ];
 
@@ -186,12 +201,14 @@ export default function Home() {
                   </p>
                   
                   <div className="mt-8 pt-4 border-t border-white/5">
+                    <Link href={feature.link}>
                     <button className="text-gray-400 text-sm hover:text-white flex items-center transition-colors duration-300">
                       Explore feature
                       <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                       </svg>
                     </button>
+                    </Link>
                   </div>
                 </div>
               </div>
