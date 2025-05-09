@@ -111,12 +111,16 @@ export default function Home() {
                 NeuroSphere harnesses AI and neuroscience to provide personalized mental wellness tools that evolve with you. Experience clarity like never before.
               </p>
               <div className="mt-10 flex flex-wrap gap-4 justify-center lg:justify-start">
+                <Link href="/signup">
                 <button className="bg-white text-black py-3 px-8 rounded-full font-medium hover:bg-gray-200 transition-colors duration-300 shadow-lg shadow-white/10">
                   Start Your Journey
                 </button>
+                </Link>
+                <Link href="#features">
                 <button className="bg-transparent border border-white/25 text-white py-3 px-8 rounded-full font-medium hover:bg-white/10 transition-colors duration-300">
                   Explore Features
                 </button>
+                </Link>
               </div>
               
               {/* Stats */}
@@ -329,9 +333,11 @@ export default function Home() {
                 <p className="text-gray-400 max-w-2xl mx-auto mb-8">
                   Join thousands who have transformed their mental health with NeuroSphere. Your path to clarity starts with a single step.
                 </p>
+                <Link href="/signup">
                 <button className="bg-white text-black py-3 px-8 rounded-full font-medium hover:bg-gray-100 transition-colors duration-300 shadow-lg">
                   Get Started For Free
                 </button>
+                </Link>
               </div>
             </div>
           </div>
