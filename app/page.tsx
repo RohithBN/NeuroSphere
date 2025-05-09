@@ -7,6 +7,7 @@ import { GiNightSleep } from "react-icons/gi";
 import { GiDualityMask } from "react-icons/gi";
 import { GiMeditation } from "react-icons/gi";
 import { RiUserCommunityLine } from "react-icons/ri";
+import Navbar from "@/components/Navbar";
 
 // Navbar items
 const navItems = [
@@ -72,40 +73,7 @@ export default function Home() {
   return (
     <>
       {/* Fixed Navbar with glassmorphism */}
-      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/25 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16 items-center">
-            <div className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-gray-700 to-black flex items-center justify-center border border-white/20 shadow-lg">
-                <span className="text-white font-bold text-xl">N</span>
-              </div>
-              <span className="text-white font-bold text-lg tracking-tight">NeuroSphere</span>
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:block">
-              <div className="flex space-x-6">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* CTA Button */}
-            <div>
-              <button className="bg-white/10 hover:bg-white/15 text-white py-2 px-4 rounded-full text-sm font-medium border border-white/25 transition-all duration-300 shadow-lg hover:shadow-white/5" >
-                <Link href='/login'>Get Started</Link>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="pt-32 pb-24 relative overflow-hidden bg-gradient-to-br from-[#0a0a0a] via-[#121212] to-[#1a1a1a]">
@@ -147,8 +115,8 @@ export default function Home() {
                   <div className="text-xs text-gray-400 mt-1">AI Support</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">100K+</div>
-                  <div className="text-xs text-gray-400 mt-1">Active Users</div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Active</div>
+                  <div className="text-xs text-gray-400 mt-1">Online Community</div>
                 </div>
               </div>
             </div>
@@ -157,7 +125,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2">
               <div className="relative h-[400px] md:h-[500px] w-full">
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-700/30 to-black/30 rounded-2xl overflow-hidden border border-white/10 backdrop-blur-sm shadow-xl">
-                  <div className="absolute inset-0 bg-[url('/images/abstract-pattern.svg')] bg-center bg-no-repeat bg-cover mix-blend-overlay opacity-20"></div>
+                  <div className="absolute inset-0 bg-[url('/abstract-pattern.jpg')] bg-center bg-no-repeat bg-cover mix-blend-overlay opacity-20"></div>
                   <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent"></div>
                   
                   {/* Floating elements */}
@@ -257,7 +225,7 @@ export default function Home() {
                   <span className="text-white font-bold text-sm">AJ</span>
                 </div>
                 <div>
-                  <p className="text-white font-medium">Alex Johnson</p>
+                  <p className="text-white font-medium">Siddharth Bijapur</p>
                   <p className="text-gray-500 text-xs">Using NeuroSphere for 8 months</p>
                 </div>
               </div>
@@ -280,7 +248,7 @@ export default function Home() {
                   <span className="text-white font-bold text-sm">SL</span>
                 </div>
                 <div>
-                  <p className="text-white font-medium">Sarah Lin</p>
+                  <p className="text-white font-medium">Shashwath A R</p>
                   <p className="text-gray-500 text-xs">Using NeuroSphere for 1 year</p>
                 </div>
               </div>
@@ -303,7 +271,7 @@ export default function Home() {
                   <span className="text-white font-bold text-sm">RK</span>
                 </div>
                 <div>
-                  <p className="text-white font-medium">Raj Kumar</p>
+                  <p className="text-white font-medium">Prasanna G</p>
                   <p className="text-gray-500 text-xs">Using NeuroSphere for 6 months</p>
                 </div>
               </div>
@@ -331,7 +299,7 @@ export default function Home() {
       {/* Call to Action */}
       <section className="py-20 bg-black relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-5"></div>
+          <div className="absolute inset-0 bg-center opacity-5"></div>
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
