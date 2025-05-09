@@ -10,6 +10,8 @@ import { TbTriangle } from "react-icons/tb";
 import { BsVolumeUp, BsVolumeMute } from "react-icons/bs";
 import { FaPlay, FaPause } from "react-icons/fa";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/context/AuthContext";
 
 // Breathing techniques data
 const breathingTechniques = [
@@ -104,6 +106,12 @@ const musicOptions = [
 ];
 
 export default function BreathingCenter() {
+  const { user, isLoading } = useAuth();
+    const router = useRouter();
+  
+    if(!user){
+      router.push("/login");
+    }
   const [selectedTechnique, setSelectedTechnique] = useState(breathingTechniques[0]);
   const [isBreathingActive, setIsBreathingActive] = useState(false);
   const [breathingPhase, setBreathingPhase] = useState("ready");

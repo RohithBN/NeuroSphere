@@ -83,7 +83,11 @@ const sleepTips = {
 
 export default function SleepTracker() {
   const { user, isLoading } = useAuth();
-  const router = useRouter();
+    const router = useRouter();
+  
+    if(!user){
+      router.push("/login");
+    }
   
   // States for logging new sleep entry
   const [showEntryForm, setShowEntryForm] = useState(false);

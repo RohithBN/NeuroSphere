@@ -28,7 +28,8 @@ const goals = [
 const genderOptions = ["Male", "Female", "Non-binary", "Prefer not to say"];
 
 export default function Onboarding() {
-  const { user } = useAuth();
+  const { user,userProfile} = useAuth();
+
   const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -46,6 +47,13 @@ export default function Onboarding() {
     router.push("/login");
     return null;
   }
+  if (userProfile) {
+    // Redirect if user is already onboarded
+    router.push("/dashboard");
+    return null;
+  }
+
+  
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData((prev) => ({

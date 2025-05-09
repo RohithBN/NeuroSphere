@@ -64,6 +64,10 @@ const activityTags = [
 export default function MoodTracker() {
   const { user, isLoading } = useAuth();
   const router = useRouter();
+
+  if(!user){
+    router.push("/login");
+  }
   
   // States for logging new mood entry
   const [showEntryForm, setShowEntryForm] = useState(false);

@@ -125,6 +125,10 @@ export default function FocusSpace() {
   const { user, isLoading } = useAuth();
   const router = useRouter();
 
+  if(!user){
+    router.push("/login");
+  }
+
   // States
   const [selectedActivity, setSelectedActivity] = useState<Activity | null>(null);
   const [activeGame, setActiveGame] = useState<string | null>(null);

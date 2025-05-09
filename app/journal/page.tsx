@@ -54,6 +54,9 @@ const entryTags = [
 export default function Journal() {
   const { user, isLoading } = useAuth();
   const router = useRouter();
+  if(!user){
+    router.push("/login");
+  }
   
   // States for journal functionality
   const [showEntryForm, setShowEntryForm] = useState(false);
